@@ -101,7 +101,7 @@ class ChatList extends StatelessWidget{
                                           child: Stack(
                                               children: [
                                                 Container(
-                                                    width: 90,
+                                                    width: 91,
                                                     height: 90,
                                                     decoration: BoxDecoration(
                                                       color: Colors.white,
