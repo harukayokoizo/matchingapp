@@ -89,7 +89,7 @@ class PreChat extends StatelessWidget{
             child: GestureDetector(
               ///画面遷移ボタン
               onTap: () async{
-                //await chatModel.chatStart(doc);
+                await chatModel.chatStart(doc);
                 await chatModel.chatCreate(doc);
                 Navigator.of(context).pop();
               },

@@ -391,6 +391,7 @@ class ChatList extends StatelessWidget{
                             }
                           }
 
+                          chatModel.chatDocumentsCache = chatModel.chatDocuments;
                           chatModel.userProfileCache = chatModel.userProfile;
 
                           if(chatModel.userProfile.length == 0){
@@ -728,7 +729,7 @@ class ChatFirstCache extends StatelessWidget{
                     ),
                   ),
                   subtitle: Text(
-                    chatModel.chatDocuments[index]['latestmessage'],
+                    chatModel.chatDocumentsCache[index]['latestmessage'],
                     style: TextStyle(
                       fontSize: 17,
                     ),

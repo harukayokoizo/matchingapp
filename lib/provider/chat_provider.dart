@@ -27,6 +27,7 @@ class ChatProvider extends ChangeNotifier {
 
 
   //メッセージ下のユーザーのメモリキャッシュ
+  List<dynamic> chatDocumentsCache = [];
   List<dynamic> matchUserCache = [];
   List<dynamic> userProfileCache = [];
 
@@ -298,6 +299,7 @@ class ChatProvider extends ChangeNotifier {
   //メッセージコレクションを更新する。
   Future<void> updateMessageCollection(String chatDocumentId)async{
     var createdAt = FieldValue.serverTimestamp();
+    var messageCollection = fireStore..collection('chat').doc('$chatDocumentId').collection('message');
 
     fireStore
         .collection('chat')
